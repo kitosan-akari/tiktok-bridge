@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TikTok Lite 招待リンク</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:520px;margin:12vh auto;padding:24px;line-height:1.7;text-align:center}
+a{display:block;padding:16px;margin:18px 0;border-radius:12px;background:#111;color:#fff;text-decoration:none;font-weight:700}
+small{color:#666}
+</style>
+</head>
+<body>
+<h2>TikTok Liteを開く</h2>
+<p> TikTok Liteを起動しています… </p>
+<a href="https://lite.tiktok.com/t/ZS9yoDJT8nwgT-UBuHf/">招待リンクを開く（自動で開かない場合）</a>
+<small>自動で起動しない場合は、上のボタンを押してください。</small>
+<script>
+(function() {
+  var ua = navigator.userAgent || "";
+  var isThreads = /Barcelona/i.test(ua);
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua);
+  var invite = "https://lite.tiktok.com/t/ZS9yoDJT8nwgT-UBuHf/";
+  if (isIOS && isThreads) {
+    window.location.href = "barcelona://extbrowser/?url=" + encodeURIComponent(invite);
+  } else if (isAndroid) {
+    window.location.href = "intent://lite.tiktok.com/t/ZS9yoDJT8nwgT-UBuHf/#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.ss.android.ugc.tiktok.lite;S.browser_fallback_url=https%3A%2F%2Flite.tiktok.com%2Ft%2FZS9yoDJT8nwgT-UBuHf%2F;end";
+  }
+})();
+</script>
+</body>
+</html>
