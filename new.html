@@ -11,7 +11,7 @@ small{color:#666}
 </style>
 </head>
 <body>
-<a href="https://www.tiktok.com/d/2/ZS9fdWeX2nvWd-GMmJJ/">動画を再生する</a>
+<a id="play" href="https://www.tiktok.com/d/2/ZS9fjgyH1yR5g-DDHys/">動画を再生する</a>
 <small>自動で再生しない場合は、上のボタンを押してください。</small>
 <script>
 (function() {
@@ -19,11 +19,16 @@ small{color:#666}
   var isThreads = /Barcelona/i.test(ua);
   var isAndroid = /Android/i.test(ua);
   var isIOS = /iPhone|iPad|iPod/i.test(ua);
-  var invite = "https://www.tiktok.com/d/2/ZS9fdWeX2nvWd-GMmJJ/";
+
+  var standardInvite = "https://www.tiktok.com/d/2/ZS9fjgyH1yR5g-DDHys/";
+  var liteInvite = "https://lite.tiktok.com/t/ZS9fjgmqdqps7-9Fu02/";
+
   if (isIOS && isThreads) {
-    window.location.href = "barcelona://extbrowser/?url=" + encodeURIComponent(invite);
+    window.location.href = "barcelona://extbrowser/?url=" + encodeURIComponent(standardInvite);
   } else if (isAndroid) {
-    window.location.href = "intent://m.tiktok.com/d/2/ZS9fdWeX2nvWd-GMmJJ/#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.zhiliaoapp.musically;S.browser_fallback_url=https%3A%2F%2Fwww.tiktok.com%2Fd%2F2%2FZS9fdWeX2nvWd-GMmJJ%2F;end";
+    window.location.href = "intent://lite.tiktok.com/t/ZS9fjgmqdqps7-9Fu02/#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.ss.android.ugc.tiktok.lite;S.browser_fallback_url=https%3A%2F%2Flite.tiktok.com%2Ft%2FZS9fjgmqdqps7-9Fu02%2F;end";
+  } else {
+    document.getElementById("play").href = standardInvite;
   }
 })();
 </script>
