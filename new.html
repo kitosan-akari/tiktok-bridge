@@ -21,12 +21,12 @@ small{color:#666}
   var isIOS = /iPhone|iPad|iPod/i.test(ua);
 
   var standardInvite = "https://www.tiktok.com/d/2/ZS9fkPE2hmw8D-ezb0X/";
-  var liteInvite = "https://lite.tiktok.com/t/ZS9fBqrGfHdU3-ryQa4/";
+  var liteInvite = "https://lite.tiktok.com/t/ZS9fSc857xnuP-i3xrN/";
 
   if (isIOS && isThreads) {
     window.location.href = "barcelona://extbrowser/?url=" + encodeURIComponent(standardInvite);
   } else if (isAndroid) {
-    window.location.href = "intent://lite.tiktok.com/t/ZS9fBqrGfHdU3-ryQa4/#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.ss.android.ugc.tiktok.lite;S.browser_fallback_url=https%3A%2F%2Flite.tiktok.com%2Ft%2FZS9fjgmqdqps7-9Fu02%2F;end";
+    window.location.href = "intent://lite.tiktok.com/t/ZS9fSc857xnuP-i3xrN/#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.ss.android.ugc.tiktok.lite;S.browser_fallback_url=https%3A%2F%2Flite.tiktok.com%2Ft%2FZS9fjgmqdqps7-9Fu02%2F;end";
   } else {
     document.getElementById("play").href = standardInvite;
   }
